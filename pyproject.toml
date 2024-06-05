@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "telegram-gpt-bot"
+version = "0.1.0"
+description = ""
+authors = ["Fernando Derkoski (brilvio) brilvio@gmail.com"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.11"
+pydantic = "^2.7.3"
+pytelegrambotapi = "^4.18.1"
+pydantic-settings = "^2.3.0"
+openai = "^1.31.0"
+openai-whisper = { git = "https://github.com/openai/whisper.git" }
+torch = { version = "1.12.0", source = "pytorch" }
+
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.7"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu116"
+priority = "explicit"
